@@ -1,0 +1,16 @@
+[Container]
+Image=localhost/gmj-backend:latest
+ContainerName=gmj-backend
+Network=gmj.network
+PublishPort=5000:5000
+
+Environment=DB_HOST=gmj-db
+Environment=DB_PORT=5432
+Environment=DB_USER=postgres
+Environment=DB_PASSWORD=20062007
+Environment=DB_NAME=gmj_db
+
+Environment=JWT_SECRET=supersecret123
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,14 @@
+[Container]
+Image=docker.io/library/postgres:15-alpine
+ContainerName=gmj-db
+Network=gmj.network
+Volume=gmj-db.volume:/var/lib/postgresql/data
+Environment=POSTGRES_USER=postgres
+Environment=POSTGRES_PASSWORD=20062007
+Environment=POSTGRES_DB=gmj_db
+
+[Install]
+WantedBy=default.target
+
+[Service]
+TimeoutStartSec=900

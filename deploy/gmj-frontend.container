@@ -1,0 +1,8 @@
+[Container]
+Image=localhost/gmj-frontend:latest
+ContainerName=gmj-frontend
+Network=gmj.network
+PublishPort=3000:3000
+
+[Install]
+WantedBy=default.target
